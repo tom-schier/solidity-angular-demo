@@ -1,3 +1,13 @@
-<p>
-  exchange-rates works!
-</p>
+<div class="container">
+  <h1>Exchange Rates</h1>
+  <form>
+    <ul>
+      <li *ngFor="let rate of _exchangeSvc.allRates; ">
+          <div class="form-group form-inline">
+              <label for="exRate">{{rate.code1}} / {{rate.code2}}</label>
+              <input type="text" class="form-control" id="tokenHoldings" value={{rate.currentExchangeRate}}>
+            </div>    
+      </li>
+    </ul>
+  </form>
+</div>

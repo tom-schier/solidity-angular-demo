@@ -1,19 +1,19 @@
 <div class="container">
   <h1>Borrower</h1>
   <form>
-    <div class="form-group form-inline">
-      <label for="tokenName">{{theToken}}</label>
-      <input type="text" readonly class="form-control" id="tokenHoldings" [(ngModel)]='tokenHoldings' name="tholdings" #tholdings="ngModel">
+    <div class="form-group form-inline row">
+      <label for="tokenName" class="col-6">{{theToken}}</label>
+      <input type="text" readonly class="form-control col-6" id="tokenHoldings" [(ngModel)]='tokenHoldings' name="tholdings" #tholdings="ngModel">
     </div>
 
     <div class="form-group form-inline">
-      <label for="usdHoldings">USD</label>
-      <input type="text" readonly class="form-control" id="usdHoldings" [(ngModel)]='currencyHoldings' name="holdings" #holdings="ngModel">
+      <label for="usdHoldings" class="col-6">USD</label>
+      <input type="text" readonly class="form-control col-6" id="usdHoldings" [(ngModel)]='currencyHoldings' name="holdings" #holdings="ngModel">
     </div>
 
     <div class="form-group form-inline">
-      <label for="agreedRate">Rate</label>
-      <input type="text" class="form-control" id="agreedRate" [(ngModel)]='agreedRate' name="rate" #rate="ngModel">
+      <label for="agreedRate" class="col-6">Agreed Rate</label>
+      <input type="text" class="form-control col-6" id="agreedRate" [(ngModel)]='agreedRate' name="rate" #rate="ngModel">
     </div>
 
     <button type="submit" class="btn btn-success">Accept</button>
