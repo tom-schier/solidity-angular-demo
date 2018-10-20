@@ -1,3 +1,21 @@
-<p>
-  borrower works!
-</p>
+<div class="container">
+  <h1>Borrower</h1>
+  <form>
+    <div class="form-group form-inline">
+      <label for="tokenName">{{theToken}}</label>
+      <input type="text" readonly class="form-control" id="tokenHoldings" [(ngModel)]='tokenHoldings' name="tholdings" #tholdings="ngModel">
+    </div>
+
+    <div class="form-group form-inline">
+      <label for="usdHoldings">USD</label>
+      <input type="text" readonly class="form-control" id="usdHoldings" [(ngModel)]='currencyHoldings' name="holdings" #holdings="ngModel">
+    </div>
+
+    <div class="form-group form-inline">
+      <label for="agreedRate">Rate</label>
+      <input type="text" class="form-control" id="agreedRate" [(ngModel)]='agreedRate' name="rate" #rate="ngModel">
+    </div>
+
+    <button type="submit" class="btn btn-success">Accept</button>
+  </form>
+</div>
