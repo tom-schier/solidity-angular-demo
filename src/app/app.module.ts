@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, InjectionToken } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -11,7 +11,12 @@ import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.componen
 import { FeesComponent } from './fees/fees.component';
 import { ActionsComponent } from './actions/actions.component';
 import { StatusBarComponent } from './status-bar/status-bar.component';
+import { VlxToEthService } from './services/vlx-to-eth.service';
+import Web3 from 'web3';
 
+
+// Create an Injection Token with web3 inside
+//export const WEB3 = new InjectionToken<Web3>('web3');
 
 @NgModule({
   declarations: [
@@ -28,7 +33,8 @@ import { StatusBarComponent } from './status-bar/status-bar.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [ExchangeRatesService],
+  providers: [ExchangeRatesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
